@@ -1,8 +1,11 @@
+;used 8bit numbers and 8bit & 16bit registers
+
+
 .model small
 .stack 100h
 .data
-    seriesStart dw 500
-    seriesEnd dw 520
+    seriesStart dw 100
+    seriesEnd dw 110
     result dw ?
     sumSaveToOffset dw 600
     
@@ -14,16 +17,16 @@
         mov ds, ax
         
         ;save number of odd series from seriesStart->500 to
-        ;seriesEnd->520. That means 1, 3, 5, ... , 21
+        ;seriesEnd->510. That means 1, 3, 5, ... , 21
         mov si, seriesStart
         mov di, seriesEnd
         sub di, si
          
         mov ax, di
         mov bx, 2
-        div bx
+        ;div bx
         
-        mov di, ax
+        ;mov di, ax
         inc di
         mov cx, di
         
@@ -31,7 +34,7 @@
         loop1:
             mov [si], ax
             add ax, 2
-            add si, 2
+            add si, 1
             loop loop1
         
         
@@ -44,7 +47,7 @@
             mov dx, [bx]
             add ax, [bx]
             
-            add bx, 2            
+            add bx, 1            
             loop loop2  
         
         mov result, ax
@@ -60,4 +63,4 @@
  
  end main
 
-; need to customize according to start number to end number
+; need to customize according to start number to end number -> completed
