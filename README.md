@@ -29,3 +29,4 @@ Basic and fundamental problems and it's solution in assembly language
 26. show the current date
 27. sum of series of even numbers where numbers are stored from starting offset 500 and store the result at offset 600
 28. sum of series of odd numbers where numbers are stored from starting offset 500 and store the result at offset 600
+29. find gcd
