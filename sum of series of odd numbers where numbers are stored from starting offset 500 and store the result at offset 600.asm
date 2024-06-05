@@ -4,8 +4,8 @@
 .model small
 .stack 100h
 .data
-    seriesStart dw 100
-    seriesEnd dw 110
+    seriesStart dw 500
+    seriesEnd dw 510
     result dw ?
     sumSaveToOffset dw 600
     
